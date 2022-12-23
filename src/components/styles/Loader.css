@@ -1,0 +1,11 @@
+.loader{
+    background: -webkit-linear-gradient(#020514,#03071e, #03071eee);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokeball-img{
+    width: 400px;
+}

@@ -1,0 +1,37 @@
+.home input{
+    border: none;
+    height: 35px;
+    width: 250px;
+    margin-right: 8px;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.home button{
+    height: 35px;
+    background-color: #fca311;
+    color: #003566;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition:  0.4s ease-in-out;
+}
+
+.home button:hover{
+    transform: translateY(-1px);
+    background-color: #f8a828;
+    
+}
+
+@media (max-width: 330px){
+    .home input{
+        width: 200px;
+    }
+
+    .home button{
+        font-size: 16px;
+        
+    }
+}

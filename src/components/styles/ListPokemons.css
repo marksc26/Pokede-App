@@ -1,0 +1,9 @@
+.list-pokemons{
+    display: grid;
+    gap: 30px;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    justify-items: center;
+    scroll-behavior: smooth;
+}
+

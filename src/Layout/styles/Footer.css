@@ -1,0 +1,27 @@
+.footer{
+    margin-top: 60px;
+    height: 190px;
+    background-color: #03071e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dosis' sans-serif;
+}
+
+.dev{
+    color: #ffc300;
+    font-size: 12px;
+}
+
+.dev span{
+    font-size: 12px;
+}
+
+.logo-footer{
+    width: 150px;
+}
+
+.pikachu-footer{
+    width: 60px;
+}
