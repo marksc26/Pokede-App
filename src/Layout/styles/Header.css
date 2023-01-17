@@ -19,23 +19,25 @@
      margin-left: 20px;
  }
  
- .bxs-moon{
-     color:#fca311;
-     font-size: 23px;
-     display: flex;
-     align-items: center;
-     cursor: pointer;
-     
- }
- 
- .bxs-moon:hover{
-     color: #01529ee7;
- }
  
  .moon-logout{
      display: flex;
      align-items: center;
 
+ }
+
+ .btn{
+    background-color: #03071e;
+    color: #fca311;
+    border: none;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+ }
+
+ .btn:hover{
+    color: #01529ee7;
  }
 
  .icons-container{
@@ -67,6 +69,35 @@
         margin-right: 15px;
     }
 
+ }
+
+ /*----darkMode----*/
+
+ .header-pokedex-darkMode{
+    display: flex;
+    justify-content:space-between;
+    background-color: #01030c;
+    height: 85px;
+    margin-bottom: 10px;
+   
+ }
+
+ .header-pokedex-darkMode img{
+    width: 200px;
+}
+
+.btn-dark{
+    background-color: #01030c;
+    color: #fca311;
+    border: none;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+ }
+
+ .btn-dark:hover{
+    color: #01529ee7;
  }
 
 

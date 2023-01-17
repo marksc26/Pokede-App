@@ -6,7 +6,7 @@
 
 
 
-h2{
+.h2Main{
     color: #003566;
     text-align: center;
     padding-top: 20px;
@@ -125,10 +125,19 @@ span{
 
 }
 
-.dark-theme{
-    background-color: #00213f;
+/*-------dark-mode------*/
+
+.main-dark{
+    background-color: #03071e;
     color: white;
-    
-    
+    font-family: 'Dosis', sans-serif;
+
+}
+
+.h2MainDark{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 28px;
 
 }

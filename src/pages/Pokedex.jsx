@@ -82,7 +82,7 @@ const Pokedex = () => {
    
 
    useEffect(() =>{
-    const URL = `https://pokeapi.co/api/v2/${pokemonType ? `type/${pokemonType}/`: "pokemon/?limit=600"}`
+    const URL = `https://pokeapi.co/api/v2/${pokemonType ? `type/${pokemonType}/`: "pokemon/?limit=1000"}`
     axios.get(URL)
         .then( res => {
             if(pokemonType){
@@ -109,21 +109,23 @@ const Pokedex = () => {
   
 //effect para busqueda
    useEffect(() => {
-    const newPokemons = pokemons.filter(pokemon => pokemon.name.includes(namePokemon))
+    const newPokemons = pokemons.filter(pokemon => pokemon.name.includes(namePokemon.toLowerCase()))
     setPokemonsFilter(newPokemons)
 
    },[namePokemon, pokemons])
 
 
 
+/*-----dark mode-----*/
 
+const darkMode = useSelector(state => state.darkMode)
 
 
   return (
-    <main className="main" >
+    <main className={!darkMode ? "main" : "main-dark"} >
        
        <Header/>
-        <h2>Welcome <span>{nameTrainer}</span>, here you can find your favorite pokemon</h2>
+        <h2 className={!darkMode ? "h2Main" : "h2MainDark"}>Welcome <span>{nameTrainer}</span>, here you can find your favorite pokemon</h2>
         <form className='form-container' onSubmit={handleSubmit}>
             <div className='input-container'>
                 <input type="text" id='namePokemon'/>

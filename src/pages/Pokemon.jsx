@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import '../pages/styles/Pokemon.css'
 import Footer from '../Layout/Footer'
 import Header from '../Layout/Header'
+import { useSelector } from 'react-redux'
 
 
 const Pokemon = () => {
@@ -28,27 +29,31 @@ const Pokemon = () => {
 
     }, [])
 
+    const darkMode = useSelector(state => state.darkMode)
+
 
     
   return (
-    <main>
-       <Header/>
-        <section className='pokemon-card'>
-            <article className='pokemon-content'>
-            <section className='first-part'>
-            <div className={`pokeCard-header bg-lg-${dataPokemon?.types[0].type.name}`}>
-                <img className='img-pokemon' src={dataPokemon?.sprites.other["official-artwork"].front_default} alt="" />
-            </div>
+    
+       <main className={!darkMode ? "pokemon-main" :  "pokemon-dark"}> 
+        <Header/>
+        <section className={!darkMode ? "pokemon-card" : "pokemon-card-dark"}>
+           
+            <article className={!darkMode ? "pokemon-content": "pokemon-content-dark"}>
+                <section className='first-part'>
+                    <div className={`pokeCard-header bg-lg-${dataPokemon?.types[0].type.name}`}>
+                        <img className='img-pokemon' src={dataPokemon?.sprites.other["official-artwork"].front_default} alt="" />
+                    </div>
                 
                 <h3># {dataPokemon?.id}</h3>
                 <h2 className={`textColor-${dataPokemon?.types[0].type.name}`}>{dataPokemon?.name}</h2>
             <div className='weight-height-info'>
                 <div className='weight-info'>
-                    <p><span className='span'>Weight</span>  {dataPokemon?.weight}</p>
+                    <p><span className={!darkMode ? "span" : "span-dark"}>Weight</span>  {dataPokemon?.weight}</p>
               </div>
                <div className='height-info'>
                     
-                    <p><span className='span'>Height</span>   {dataPokemon?.height}</p>
+                    <p><span className={!darkMode ? "span" : "span-dark"}>Height</span>   {dataPokemon?.height}</p>
                </div>  
             </div>
             
@@ -100,11 +105,15 @@ const Pokemon = () => {
         </section>
 
         </article>
-        </section>
+         
+     </section>
+     <Footer/>
+ </main>
     
-        <Footer/>
+    
+        
 
-    </main>
+   
   )
 }
 

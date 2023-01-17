@@ -1,11 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import nameTrainer from './slices/nameTrainer.slice'
- export default configureStore({
+import darkMode from './slices/darkMode.slice'
+ 
+export default configureStore({
     reducer:{
-
-        nameTrainer
-        
-
-
+        nameTrainer,
+        darkMode
     }
 })

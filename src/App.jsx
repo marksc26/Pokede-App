@@ -12,7 +12,11 @@ import Loader from './components/Loader'
 
 
 
+
+
+
 function App() {
+
 
   const [isLoading, setIsLoading] = useState(true)
 
@@ -21,7 +25,7 @@ function App() {
     setTimeout(() =>{
       setIsLoading(!isLoading)
 
-    },3500)
+    },3000)
 
   },[])
 
@@ -34,6 +38,9 @@ function App() {
 
   },[nameTrainer])
 
+
+  
+
   return (
   
     <div className="App">  
@@ -45,11 +52,14 @@ function App() {
         </Route>
 
         
-        <Route element={<RouthProtected/>}>
+          <Route element={<RouthProtected/>}>
 
            <Route path='/pokedex' element={ isLoading ? (<Loader/>) : (<Pokedex />)}/>
            <Route path='/pokedex/:id' element={<Pokemon/>}/>
-        </Route>
+
+          </Route>
+        
+        
        
       </Routes>
       
