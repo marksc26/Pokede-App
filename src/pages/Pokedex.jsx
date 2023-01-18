@@ -109,7 +109,7 @@ const Pokedex = () => {
   
 //effect para busqueda
    useEffect(() => {
-    const newPokemons = pokemons.filter(pokemon => pokemon.name.includes(namePokemon.toLowerCase()))
+    const newPokemons = pokemons.filter(pokemon => pokemon.name.includes(namePokemon.toLocaleLowerCase()))
     setPokemonsFilter(newPokemons)
 
    },[namePokemon, pokemons])
